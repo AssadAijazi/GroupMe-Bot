@@ -6,7 +6,7 @@ var botConfig = {token: 'eNW0Fh9oonoanStkHONy7rxI3cMX8TZbSAvur3lG',
                  url: 'https://stormy-coast-96304.herokuapp.com/' };
 var myBot = bot(botConfig);
 
-mybot.on('botRegistered', function(b) {
+myBot.on('botRegistered', function(b) {
         console.log("I am registered");
         b.message("This a new test");
 });

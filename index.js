@@ -12,5 +12,5 @@ myBot.on('botRegistered', function(b) {
 });
 
 console.log("I am serving");
-mybot.serve(8000);
+myBot.serve(8000);
 

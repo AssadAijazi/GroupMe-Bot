@@ -6,8 +6,14 @@ var botConfig = {token: 'eNW0Fh9oonoanStkHONy7rxI3cMX8TZbSAvur3lG',
                  url: 'https://stormy-coast-96304.herokuapp.com/' };
 var myBot = bot(botConfig);
 
+myBot.on('botRegistered', function(b) {
+        b.message("Hellooooo");
+});
+
 myBot.on('botMessage', function(b, message) {
+        console.log("something happened");
         if(message.name != b.name) {
+            console.log("I should have said something now");
             b.message(message.name + " said " + message.txt);
         }
 });

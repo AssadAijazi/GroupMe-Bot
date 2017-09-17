@@ -1,18 +1,10 @@
-var express = require('express');
-var app = express();
+var bot = require('fancy-groupme-bot');
 
-app.set('port', (process.env.PORT || 5000));
+var botConfig = {token: 'eNW0Fh9oonoanStkHONy7rxI3cMX8TZbSAvur3lG',
+                 group: '34317876',
+                 name: 'New Test Bot',
+                 url: 'https://stormy-coast-96304.herokuapp.com/' };
+var myBot = bot(botConfig);
+bot.message("Hi, I'm a new Bot!");
+                 
 
-app.use(express.static(__dirname + '/public'));
-
-// views is directory for all template files
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-
-app.get('/', function(request, response) {
-  response.render('pages/index');
-});
-
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
-});

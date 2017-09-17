@@ -8,7 +8,7 @@ var myBot = bot(botConfig);
 
 myBot.on('botMessage', function(b, message) {
         if(message.name != b.name) {
-            b.message(message.name + " said " message.txt);
+            b.message(message.name + " said " + message.txt);
         }
 });
 

@@ -11,6 +11,6 @@ myBot.on('botRegistered', function(b) {
         b.message("This a new test");
 });
 
-console.log("i am serving");
+console.log("I am serving");
 mybot.serve(8000);
 
